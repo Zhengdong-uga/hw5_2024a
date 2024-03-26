@@ -206,8 +206,9 @@ body > header {
 @media print {
     .pricing {
       display: flex;
-      align-items: flex-end; /* Align items along the bottom */
-      flex-wrap: wrap;
+      align-items: flex-end; 
+      justify-content: center;
+      flex-direction: row;
     }
   }
 
@@ -231,10 +232,8 @@ body > header {
 
 /* Step21: Without using list-style-type add the thumbs up entity as shown in the cards. This is a challenge problem. You should not give or receive help when completing it.**For some people the thumbs up is not printing as yellow. That is fine. */
 @media print {
-    .card ul li::before {
-      content: "\1F44D"; 
-      color: yellow; 
-      margin-right: 10px; 
+    .card ul li:nth-child(2)::after {
+      content: "👍"; 
     }
   }
   
